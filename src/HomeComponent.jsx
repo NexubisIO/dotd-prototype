@@ -32,7 +32,7 @@ const CalaveritaForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
-        const userMessage = `It's for a friend, named ${formData.friendName}\nFunny, kind and adventurous\nLoves cars and a good time at Dias\nLoves sneakers`;
+        const userMessage = `It's for a friend, named ${formData.friendName}. Their main characteristics are: they are funny, kind, and adventurous. They have a habit of ${formData.habit}, work as a ${formData.profession}, and enjoy ${formData.hobby} as a hobby. A unique physical characteristic is ${formData.characteristic}.`;
         try {
             const response = await openAiApi.post('', {
                 model: "gpt-4-turbo-preview",
